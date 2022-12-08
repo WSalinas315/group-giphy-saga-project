@@ -17,7 +17,7 @@ function* rootSaga() {
 // get search results from API
 function* fetchSearchResults(action) {
   try {
-    const searchResults = yield axios.get('/api/search')
+    const searchResults = yield axios.get('/api/search/' + action.payload)
     yield put({ type: 'SET_SEARCH_RESULTS', payload: searchResults })
   } catch (err) {
     alert('Error getting search results.')
