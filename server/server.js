@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 5000;
 const favoriteRouter = require('./routes/favorite.router');
 const categoryRouter = require('./routes/category.router');
 const searchRouter = require('./routes/search.router');
-const { default: axios } = require('axios');
 
 // Body parser middleware
 app.use(bodyParser.json());

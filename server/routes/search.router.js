@@ -5,6 +5,7 @@ require('dotenv').config();
 
 // Route to GET gifs of a specified theme from Giphy API
 app.use('/:query', (req, res) => {
+  
   // extract search term from url
   const querySubject = req.params.query;
 
