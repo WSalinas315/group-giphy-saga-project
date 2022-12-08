@@ -22,7 +22,7 @@ app.use(express.static('build'));
 app.use('/api/favorite', favoriteRouter);
 app.use('/api/category', categoryRouter);
 
-// GET gifs of a specified theme from Giphy API
+// Route to GET gifs of a specified theme from Giphy API
 app.use('/api/search/:query', (req, res) => {
   const querySubject = req.params.query;
   axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${querySubject}&limit=8`)
