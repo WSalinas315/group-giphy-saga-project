@@ -18,7 +18,8 @@ function* rootSaga() {
 function* fetchSearchResults(action) {
   try {
     const searchResults = yield axios.get('/api/search/' + action.payload)
-    yield put({ type: 'SET_SEARCH_RESULTS', payload: searchResults })
+    console.log(searchResults)
+    yield put({ type: 'SET_SEARCH_RESULTS', payload: searchResults.data.data })
   } catch (err) {
     alert('Error getting search results.')
     console.log(err);
