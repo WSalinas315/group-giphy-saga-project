@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <header>
-            <h1>Giphy Saga Project</h1>
+            <h1>Favorite Images</h1>
         </header>
     )
     
