@@ -8,7 +8,7 @@ export default function SearchResultsList() {
 
   const resultsList = searchResults.map(item => {
     return (
-      <SearchResultsItem item={item} />
+      <SearchResultsItem key={item.id} item={item} />
     )
   })
 

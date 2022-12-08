@@ -37,7 +37,7 @@ function* fetchFavorites(action) {
 }
 
 // search results reducer
-const searchResults = (state = [], action) => {
+const searchResults = (state = [{url: 'yo', id: 0}], action) => {
   switch(action.type) {
     case 'SET_SEARCH_RESULTS': return action.payload;
     case 'CLEAR_SEARCH_RESULTS': return [];
@@ -46,7 +46,7 @@ const searchResults = (state = [], action) => {
 }
 
 // favorite GIFs reducer
-const favoriteGifs = (state = [], action) => {
+const favoriteGifs = (state = [{url: 'bro', id: 0}], action) => {
   switch(action.type) {
     case 'SET_FAVORITES': return action.payload;
     default: return state;

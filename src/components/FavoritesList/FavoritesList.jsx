@@ -8,7 +8,7 @@ export default function FavoritesList() {
 
   const favoritesList = favoriteGifs.map(item => {
     return (
-      <FavoriteListItem item={item} />
+      <FavoriteListItem key={item.id} item={item} />
     )
   })
 
