@@ -9,6 +9,24 @@ import logger from 'redux-logger';
 import { takeEvery, put } from 'redux-saga/effects';
 
 function* rootSaga() {
+  yield takeEvery('FETCH_SEARCH_RESULTS', fetchSearchResults)
+}
+
+function* fetchSearchResults(action) {
+  try {
+    const searchResults = yield axios.get('/api/search')
+    yield put({ type: 'SET_SEARCH_RESULTS', payload: searchResults })
+  } catch (err) {
+    alert('Error getting search results.')
+    console.log(err);
+  }
+}
+
+function* fetchFavorites(action) {
+  try {
+    const favorites = yield axios.get('/api/favorite')
+    yield put({ type: 'SET_FAVORITES', payload: favorites })
+  }
 
 }
 
@@ -16,6 +34,13 @@ const searchResults = (state = [], action) => {
   switch(action.type) {
     case 'SET_SEARCH_RESULTS': return action.payload;
     case 'CLEAR_SEARCH_RESULTS': return [];
+    default: return state;
+  }
+}
+
+const favoriteGifs = (state = [], action) => {
+  switch(action.type) {
+    case 'SET_FAVORITES': return action.payload;
     default: return state;
   }
 }
