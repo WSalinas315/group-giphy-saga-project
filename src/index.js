@@ -4,7 +4,7 @@ import App from './components/App/App';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
-import { Provider } from 'react';
+import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import { takeEvery, put } from 'redux-saga/effects';
 
@@ -35,6 +35,7 @@ function* fetchFavorites(action) {
   }
 }
 
+// search results reducer
 const searchResults = (state = [], action) => {
   switch(action.type) {
     case 'SET_SEARCH_RESULTS': return action.payload;
@@ -43,6 +44,7 @@ const searchResults = (state = [], action) => {
   }
 }
 
+// favorite GIFs reducer
 const favoriteGifs = (state = [], action) => {
   switch(action.type) {
     case 'SET_FAVORITES': return action.payload;
@@ -50,16 +52,14 @@ const favoriteGifs = (state = [], action) => {
   }
 }
 
-
-
+// Boilerplate for Redux store & Sagas
 const sagaMiddleware = createSagaMiddleware();
-
-const reduxStore = createStore({}, applyMiddleware(logger, sagaMiddleware))
-
+const reducers = combineReducers({ searchResults, favoriteGifs })
+const reduxStore = createStore(reducers, applyMiddleware(logger, sagaMiddleware));
 sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
-<Provider store={store}>
+<Provider store={reduxStore}>
   <App />
 </Provider>
 , document.getElementById('root'));
