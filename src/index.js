@@ -10,8 +10,10 @@ import { takeEvery, put } from 'redux-saga/effects';
 
 function* rootSaga() {
   yield takeEvery('FETCH_SEARCH_RESULTS', fetchSearchResults)
+  yield takeEvery('FETCH_FAVORITES', fetchFavorites)
 }
 
+// get search results from API
 function* fetchSearchResults(action) {
   try {
     const searchResults = yield axios.get('/api/search')
@@ -22,12 +24,15 @@ function* fetchSearchResults(action) {
   }
 }
 
+// get favorites from database
 function* fetchFavorites(action) {
   try {
     const favorites = yield axios.get('/api/favorite')
     yield put({ type: 'SET_FAVORITES', payload: favorites })
+  } catch (err) {
+    alert('Error getting favorites.')
+    console.log(err)
   }
-
 }
 
 const searchResults = (state = [], action) => {
