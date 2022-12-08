@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App/App';
+import axios from 'axios';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
