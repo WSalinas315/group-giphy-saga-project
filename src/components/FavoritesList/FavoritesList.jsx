@@ -14,7 +14,6 @@ export default function FavoritesList() {
 
   return (
     <div>
-      <p>List of favorites:</p>
       <div className="favorites-display">
       {favoritesList}
       </div>
