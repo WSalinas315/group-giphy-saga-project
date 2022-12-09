@@ -1,6 +1,5 @@
 import FavoritesList from "../FavoritesList/FavoritesList";
-import { useDispatch } from "react-redux";
-import React, {useEffect} from "react";
+import React from "react";
 
 export default function Favorites() {
 
