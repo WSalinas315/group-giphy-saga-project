@@ -24,8 +24,9 @@ h3 {
   position: relative;
   text-align: center;
   width: 250px;
-  height: 250px;
+  height: 280px;
   margin: 5px;
+  padding-bottom: 5px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }
