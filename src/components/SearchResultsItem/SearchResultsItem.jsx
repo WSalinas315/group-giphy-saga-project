@@ -23,7 +23,7 @@ export default function SearchResultsItem({ item }) {
           src={item.images.downsized.url} 
           alt={item.title} />
         
-        <button 
+        <button
           className="material-symbols-outlined fav-btn"
           onClick={handleClickFav}>
           favorite

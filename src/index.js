@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import axios from 'axios';
 
+import './index.css'
+
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
 import { Provider } from 'react-redux';

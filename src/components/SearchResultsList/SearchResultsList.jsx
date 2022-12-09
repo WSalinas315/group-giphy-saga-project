@@ -17,7 +17,6 @@ export default function SearchResultsList() {
 
   return (
     <div>
-      <p>Search Results:</p>
       <div className="search-results-display">
         {resultsList}
       </div>

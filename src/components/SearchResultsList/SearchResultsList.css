@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0);
+
 
 .search-results-display {
   margin: 0 10%;
@@ -21,7 +21,7 @@
 .search-img {
   margin-top: 10px;
   max-width: 90%;
-  max-height: 75%;
+  max-height: 70%;
 }
 
 .search-card-info {
@@ -51,4 +51,13 @@
 
 .fav-btn:active {
   color: black;
+}
+
+.fav-btn:disabled {
+  cursor: initial;
+  color: red;
+}
+
+.fav-btn:disabled:hover {
+  background-color: rgb(0, 0, 0, 0.3);
 }
