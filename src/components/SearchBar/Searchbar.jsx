@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
+import './SearchBar.css'
+
 export default function SearchBar() {
 
   const dispatch = useDispatch();
@@ -14,13 +16,15 @@ export default function SearchBar() {
   }
 
   return (
-    <div>
+    <div className="search-form">
       <input 
         type='text'
+        placeholder='Dogs, reactions, etc.'
         value={searchIn}
         onChange={e => setSearch(e.target.value)} 
       />
       <button
+        className="material-symbols-outlined"
         onClick={handleSearch}
       >Search</button>
 
