@@ -5,3 +5,43 @@ main {
 h3 {
   text-align: center;
 }
+
+.search-form {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.results-display {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result-card {
+  position: relative;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.result-card-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  top: 80%;
+}
+
+.result-img {
+  margin-top: 10px;
+  max-width: 90%;
+  max-height: 70%;
+}

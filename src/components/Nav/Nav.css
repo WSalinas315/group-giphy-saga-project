@@ -1,9 +1,13 @@
 ul {
-  margin: 20px 40% 10px 40%;
+  margin: 20px 20% 10px 20%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
+}
+
+li {
+  margin: 0 20px;
 }
 
 li a {
