@@ -1,15 +1,16 @@
 import SearchBar from '../SearchBar/Searchbar'
 import SearchResultsList from '../SearchResultsList/SearchResultsList'
 
+import './Search.css'
 
 export default function Search() {
 
 
   return (
-  <div>
-    <h3>Search for GIFs:</h3>
+  <main>
+    <h3>Find your favorite Gifs!</h3>
     <SearchBar />
     <SearchResultsList />
-  </div>
+  </main>
   )
 }

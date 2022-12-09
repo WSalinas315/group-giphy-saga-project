@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import axios from 'axios';
 
+import './index.css'
+
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from '@redux-saga/core';
 import { Provider } from 'react-redux';
@@ -60,7 +62,7 @@ const searchResults = (state = [], action) => {
 }
 
 // favorite GIFs reducer
-const favoriteGifs = (state = [], action) => {
+const favoriteGifs = (state = {data:[]}, action) => {
   switch(action.type) {
     case 'SET_FAVORITES': return action.payload;
     default: return state;
