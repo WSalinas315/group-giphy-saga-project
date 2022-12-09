@@ -15,11 +15,10 @@ export default function Favorites() {
       dispatch({type: 'FETCH_FAVORITES'});
     }
 
-
   return (
     <div>
       <h3>Favorites:</h3>
-      {/* <FavoritesList /> */}
+      <FavoritesList />
     </div>
   )
 }

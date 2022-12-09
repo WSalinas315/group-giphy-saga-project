@@ -4,9 +4,11 @@ import FavoriteListItem from "../FavoriteListItem/FavoriteListItem";
 
 export default function FavoritesList() {
 
-  const favoriteGifs = useSelector(store => store.favoriteGifs)
+  const favoriteGifs = useSelector(store => store.favoriteGifs);
 
-  const favoritesList = favoriteGifs.map(item => {
+  console.log('THIS IS FAVORITES GIFS: ', favoriteGifs);
+
+  const favoritesList = [favoriteGifs].map(item => {
     return (
       <FavoriteListItem key={item.id} item={item} />
     )
@@ -16,7 +18,7 @@ export default function FavoritesList() {
     <div>
       <p>List of favorites:</p>
       <div className="favorites-display">
-      {favoritesList}
+        {favoritesList}
       </div>
     </div>
   )
