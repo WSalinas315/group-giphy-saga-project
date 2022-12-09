@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
+import './FavoriteListItem.css'
+
 export default function FavoriteListItem({ item }) {
 
   const dispatch = useDispatch();
@@ -27,7 +29,8 @@ export default function FavoriteListItem({ item }) {
         <p>{item.title}</p>
         {console.log('Categories: ',categories)}
 
-        <form>
+        </div>
+        <form id="category-form">
           <label>Set Category:{' '}
             <select id="category" name="category" onChange={(event) => updateCategory(event.target.key)}>
               {categoriesList}
@@ -35,7 +38,6 @@ export default function FavoriteListItem({ item }) {
           </label>
         </form>
 
-        </div>
       </div>
     </div>
   )
