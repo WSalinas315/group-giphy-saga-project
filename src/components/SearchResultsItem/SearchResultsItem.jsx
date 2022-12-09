@@ -17,12 +17,12 @@ export default function SearchResultsItem({ item }) {
   }
 
   return (
-    <div className="search-container">
+    <div className="result-container">
 
-      <div className="search-result-card">
+      <div className="result-card">
         
         <img
-          className="search-img"
+          className="result-img"
           src={item.images.downsized.url} 
           alt={item.title} />
         
@@ -34,7 +34,7 @@ export default function SearchResultsItem({ item }) {
           favorite
         </button>
         
-        <div className="search-card-info">
+        <div className="result-card-info">
 
         </div>
       </div>
