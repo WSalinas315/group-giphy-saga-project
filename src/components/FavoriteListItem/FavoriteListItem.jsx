@@ -22,16 +22,20 @@ export default function FavoriteListItem({ item }) {
     <div className="favorites-container">
       <div className="result-card">
         <img className="result-img" src={item.url} alt={item.title} />
-        <p className="result-card-info">{item.title}</p>
+        <div className="result-card-info">
+
+        <p>{item.title}</p>
         {console.log('Categories: ',categories)}
 
         <form>
-          <label>Set Category</label>
-          <select id="category" name="category" onChange={(event) => updateCategory(event.target.key)}>
-            {categoriesList}
-          </select> 
+          <label>Set Category:{' '}
+            <select id="category" name="category" onChange={(event) => updateCategory(event.target.key)}>
+              {categoriesList}
+            </select> 
+          </label>
         </form>
 
+        </div>
       </div>
     </div>
   )
