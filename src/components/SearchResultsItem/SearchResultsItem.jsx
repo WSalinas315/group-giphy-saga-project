@@ -9,7 +9,7 @@ export default function SearchResultsItem({ item }) {
 
     dispatch({
       type: 'ADD_TO_FAVORITES',
-      payload: item.images.downsized.url
+      payload: {url: item.images.downsized.url, title: item.title}
     })
   }
 
