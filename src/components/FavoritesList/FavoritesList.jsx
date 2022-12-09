@@ -29,7 +29,7 @@ export default function FavoritesList() {
 
   return (
     <div>
-      <div className="favorites-display">
+      <div className="results-display">
         {favoritesList}
       </div>
     </div>
