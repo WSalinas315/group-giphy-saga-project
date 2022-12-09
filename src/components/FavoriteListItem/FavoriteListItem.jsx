@@ -1,18 +1,18 @@
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import React, {useEffect} from "react";
 
 export default function FavoriteListItem({ item }) {
 
   // dispatch
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    getFavorites();
-  }, []);
+  // useEffect(() => {
+  //   getFavorites();
+  // }, []);
 
-  const getFavorites = () =>{
-    dispatch({type: 'FETCH_FAVORITES'});
-  }
+  // const getFavorites = () =>{
+  //   dispatch({type: 'FETCH_FAVORITES'});
+  // }
 
   return (
     <div className="favorites-container">
