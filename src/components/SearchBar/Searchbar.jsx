@@ -7,11 +7,13 @@ export default function SearchBar() {
   const dispatch = useDispatch();
 
   const [searchIn, setSearch] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch({ type: "FETCH_SEARCH_RESULTS", payload: searchIn });
     setSearch("");
+    setIsDisabled(true);
   };
 
   return (
@@ -21,12 +23,16 @@ export default function SearchBar() {
           type="text"
           placeholder="Dogs, reactions, etc."
           value={searchIn}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setIsDisabled(false);
+          }}
         />
         <button
           type="submit"
           className="material-symbols-outlined search-btn"
           onClick={handleSearch}
+          disabled={isDisabled}
         >
           Search
         </button>
