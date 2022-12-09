@@ -1,8 +1,7 @@
 import FavoritesList from "../FavoritesList/FavoritesList";
-
+import React from "react";
 
 export default function Favorites() {
-
 
   return (
     <main>

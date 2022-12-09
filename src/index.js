@@ -62,7 +62,7 @@ const searchResults = (state = [], action) => {
 }
 
 // favorite GIFs reducer
-const favoriteGifs = (state = [], action) => {
+const favoriteGifs = (state = {data:[]}, action) => {
   switch(action.type) {
     case 'SET_FAVORITES': return action.payload;
     default: return state;
