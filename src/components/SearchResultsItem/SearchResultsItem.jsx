@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux"
 
 export default function SearchResultsItem({ item }) {
@@ -7,6 +8,7 @@ export default function SearchResultsItem({ item }) {
   const handleClickFav = () => {
     console.log('fav button clicked');
 
+
     dispatch({
       type: 'ADD_TO_FAVORITES',
       payload: {url: item.images.downsized.url, title: item.title}
@@ -14,22 +16,23 @@ export default function SearchResultsItem({ item }) {
   }
 
   return (
-    <div className="search-container">
+    <div className="result-container">
 
-      <div className="search-result-card">
+      <div className="result-card">
         
         <img
-          className="search-img"
+          className="result-img"
           src={item.images.downsized.url} 
           alt={item.title} />
         
         <button
           className="material-symbols-outlined fav-btn"
-          onClick={handleClickFav}>
+          onClick={handleClickFav}
+          >
           favorite
         </button>
         
-        <div className="search-card-info">
+        <div className="result-card-info">
 
         </div>
       </div>
