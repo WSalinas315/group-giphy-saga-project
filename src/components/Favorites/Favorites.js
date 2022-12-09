@@ -4,17 +4,6 @@ import React, {useEffect} from "react";
 
 export default function Favorites() {
 
-    // dispatch
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-      getFavorites();
-    }, []);
-  
-    const getFavorites = () =>{
-      dispatch({type: 'FETCH_FAVORITES'});
-    }
-
   return (
     <main>
       <h3>Favorites:</h3>
