@@ -52,3 +52,12 @@
 .fav-btn:active {
   color: black;
 }
+
+.fav-btn:disabled {
+  cursor: initial;
+  color: red;
+}
+
+.fav-btn:disabled:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}

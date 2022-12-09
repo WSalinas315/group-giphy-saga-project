@@ -5,9 +5,9 @@ export default function Favorites() {
 
 
   return (
-    <div>
+    <main>
       <h3>Favorites:</h3>
       <FavoritesList />
-    </div>
+    </main>
   )
 }
