@@ -14,7 +14,20 @@ import { takeEvery, put } from 'redux-saga/effects';
 function* rootSaga() {
   yield takeEvery('FETCH_SEARCH_RESULTS', fetchSearchResults)
   yield takeEvery('FETCH_FAVORITES', fetchFavorites)
+  yield takeEvery('ADD_TO_FAVORITES', addToFavorites)
 }
+
+// POST favorite to the favorites array
+function* addToFavorites(action){
+  try {
+    yield axios.post('/api/favorite', action.payload)
+    yield put({type: 'FETCH_FAVORITES'}) //do we want this? We aren't on the same page, and if we move over to the favorites page, it will load them anyway
+  } catch (error) {
+    alert('error adding to favorites')
+    console.log(err);
+  }
+}
+
 
 // get search results from API
 function* fetchSearchResults(action) {
